@@ -1,7 +1,5 @@
 package obs;
 import inf.Observer;
-import sub.NewsPaper;
-import sub.Subject;
 
 public class Reader implements Observer{
   /**
@@ -9,9 +7,9 @@ public class Reader implements Observer{
    */
   private String name;
   @Override
-  public void update(Subject subject) {
-    // 這是採用拉的方法
-    System.out.println(name + " 收到報紙了，閱讀它 內容是===" + ((NewsPaper)subject).getContent());
+  public void update(String content) {
+    // 這是採用推的方法
+    System.out.println(name + " 收到報紙了，閱讀它 內容是===" + content);
   }
   
   public String getName() {

@@ -7,6 +7,7 @@ public class NewsPaper extends Subject{
   }
   public void setContent(String content) {
     this.content = content;
-    notifyObserveres();
+    // 內容有了 就通知所有讀者
+    notifyObserveres(content);
   }
 }

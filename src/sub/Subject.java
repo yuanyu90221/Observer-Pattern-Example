@@ -24,10 +24,13 @@ public class Subject {
 	public void detatch(Observer reader) {
 		readers.remove(reader);
 	}
-	
-	protected void notifyObserveres() {
+	/**
+	 * 主動由報社通知讀者
+	 * @param content 主動要推送的內容
+	 */
+	protected void notifyObserveres(String content) {
 		for (Observer reader : readers ) {
-			reader.update(this);
+			reader.update(content);
 		}
 	}
 }
