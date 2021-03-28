@@ -10,7 +10,7 @@ public class Reader implements Observer{
   private String name;
   @Override
   public void update(Subject subject) {
-    // 這是採用的方法
+    // 這是採用拉的方法
     System.out.println(name + " 收到報紙了，閱讀它 內容是===" + ((NewsPaper)subject).getContent());
   }
   
